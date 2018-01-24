@@ -14,6 +14,7 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var bodyTextView: UITextView!
+    @IBOutlet weak var clearButton: UIButton!
     
     var entry: Entry?
     
@@ -36,14 +37,20 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
     
     // Save Button
     @IBAction func saveButtonTapped(_ sender: Any) {
-        guard let title = titleTextField.text else { return }
-        guard let body = bodyTextView.text else { return }
+        guard let title = titleTextField.text, !title.isEmpty else { return }
+        guard let body = bodyTextView.text, !body.isEmpty else { return }
         if let entry = entry {
             EntryController.shared.updateExistingEntry(entry: entry, newTitle: title, newBody: body)
         } else {
             EntryController.shared.addEntryWith(title: title, body: body)
         }
         navigationController?.popToRootViewController(animated: true)
+    }
+    
+    // Clear all button
+    @IBAction func clearAllButtonTapped(_ sender: Any) {
+        titleTextField.text = ""
+        bodyTextView.text = ""
     }
     
     // Update Views
@@ -57,5 +64,6 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
     func setUpUI () {
         titleTextField.layer.cornerRadius = 15.0
         bodyTextView.layer.cornerRadius = 15.0
+        clearButton.layer.cornerRadius = 15.0
     }
 }

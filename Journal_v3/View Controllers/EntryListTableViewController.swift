@@ -40,7 +40,9 @@ class EntryListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            let entry = EntryController.shared.entries[indexPath.row]
+            EntryController.shared.remove(entry: entry)
+            tableView.reloadData()
         }    
     }
 
