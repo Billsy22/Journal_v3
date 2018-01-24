@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		16900F372018E13200188615 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16900F362018E13200188615 /* AppDelegate.swift */; };
-		16900F392018E13200188615 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16900F382018E13200188615 /* ViewController.swift */; };
 		16900F3C2018E13200188615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16900F3A2018E13200188615 /* Main.storyboard */; };
 		16900F3E2018E13200188615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16900F3D2018E13200188615 /* Assets.xcassets */; };
 		16900F412018E13200188615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16900F3F2018E13200188615 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		16900F332018E13200188615 /* Journal_v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal_v3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16900F362018E13200188615 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16900F382018E13200188615 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16900F3B2018E13200188615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16900F3D2018E13200188615 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16900F402018E13200188615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,29 @@
 		16900F352018E13200188615 /* Journal_v3 */ = {
 			isa = PBXGroup;
 			children = (
-				16900F362018E13200188615 /* AppDelegate.swift */,
-				16900F382018E13200188615 /* ViewController.swift */,
-				16900F3A2018E13200188615 /* Main.storyboard */,
-				16900F3D2018E13200188615 /* Assets.xcassets */,
-				16900F3F2018E13200188615 /* LaunchScreen.storyboard */,
-				16900F422018E13200188615 /* Info.plist */,
+				16900F482018E14B00188615 /* Resources */,
+				16900F492018E15800188615 /* UI */,
 			);
 			path = Journal_v3;
+			sourceTree = "<group>";
+		};
+		16900F482018E14B00188615 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				16900F362018E13200188615 /* AppDelegate.swift */,
+				16900F3D2018E13200188615 /* Assets.xcassets */,
+				16900F422018E13200188615 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		16900F492018E15800188615 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				16900F3A2018E13200188615 /* Main.storyboard */,
+				16900F3F2018E13200188615 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +149,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16900F392018E13200188615 /* ViewController.swift in Sources */,
 				16900F372018E13200188615 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +288,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NZ5N56B84J;
-				INFOPLIST_FILE = Journal_v3/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Journal_v3/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorBills.Journal-v3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,7 +303,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NZ5N56B84J;
-				INFOPLIST_FILE = Journal_v3/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Journal_v3/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TaylorBills.Journal-v3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
