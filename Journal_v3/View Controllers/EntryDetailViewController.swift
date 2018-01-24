@@ -28,12 +28,13 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
     // MARK:    UITextFieldDelegate Functions
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        resignFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
     
     // MARK:    Actions
     
+    // Save Button
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let title = titleTextField.text else { return }
         guard let body = bodyTextView.text else { return }
@@ -42,17 +43,14 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
         } else {
             EntryController.shared.addEntryWith(title: title, body: body)
         }
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     // Update Views
     func updateViews() {
-        guard let title = titleTextField.text else { return }
-        guard let body = titleTextField.text else { return }
-        if let entry = entry {
-            entry.title = title
-            entry.body = body
-        }
+        guard let update = entry else { return }
+        titleTextField.text = update.title
+        bodyTextView.text = update.body
     }
     
     // Set up UI

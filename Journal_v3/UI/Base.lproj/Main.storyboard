@@ -36,6 +36,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="bj9-Tj-EYs" kind="show" identifier="toEditEntry" id="9Vz-s8-MZH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -50,6 +53,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="entryListTableView" destination="JhE-pM-uMA" id="xtD-0B-XJ5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9cT-tX-S6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,4 +129,7 @@
             <point key="canvasLocation" x="-487" y="-67"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9Vz-s8-MZH"/>
+    </inferredMetricsTieBreakers>
 </document>

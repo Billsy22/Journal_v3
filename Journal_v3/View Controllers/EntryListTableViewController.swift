@@ -10,6 +10,10 @@ import UIKit
 
 class EntryListTableViewController: UITableViewController {
 
+    // MARK:    Properties
+    
+    @IBOutlet var entryListTableView: UITableView!
+    
     // MARK:    Life Cycles
     
     override func viewDidLoad() {
@@ -18,7 +22,7 @@ class EntryListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        view.reloadInputViews()
+        tableView.reloadData()
     }
 
     // MARK:    Table view data source functions
@@ -40,14 +44,17 @@ class EntryListTableViewController: UITableViewController {
         }    
     }
 
-    /*
-    // MARK: - Navigation
+    // MARK:    Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toEditEntry" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let entry = EntryController.shared.entries[indexPath.row]
+            guard let entryDetailVC = segue.destination as? EntryDetailViewController else { return }
+            entryDetailVC.entry = entry
+        }
     }
-    */
-
+    
+    // MARK:    Update Views
+    
 }
