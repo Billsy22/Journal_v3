@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		164724142018E83400A54058 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164724132018E83400A54058 /* EntryListTableViewController.swift */; };
+		1647244620193C1A00A54058 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1647244520193C1A00A54058 /* EntryDetailViewController.swift */; };
 		16900F372018E13200188615 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16900F362018E13200188615 /* AppDelegate.swift */; };
 		16900F3C2018E13200188615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16900F3A2018E13200188615 /* Main.storyboard */; };
 		16900F3E2018E13200188615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16900F3D2018E13200188615 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		164724132018E83400A54058 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		1647244520193C1A00A54058 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EntryDetailViewController.swift; path = "Journal_v3/View Controllers/EntryDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
 		16900F332018E13200188615 /* Journal_v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal_v3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16900F362018E13200188615 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16900F3B2018E13200188615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				164724132018E83400A54058 /* EntryListTableViewController.swift */,
+				1647244520193C1A00A54058 /* EntryDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				16900F4B2018E24E00188615 /* Entry.swift in Sources */,
 				16900F372018E13200188615 /* AppDelegate.swift in Sources */,
 				164724142018E83400A54058 /* EntryListTableViewController.swift in Sources */,
+				1647244620193C1A00A54058 /* EntryDetailViewController.swift in Sources */,
 				16B579852018E4D400D55163 /* EntryController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
