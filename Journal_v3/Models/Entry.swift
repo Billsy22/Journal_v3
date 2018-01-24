@@ -14,14 +14,13 @@ class Entry: Equatable {
     
     var title: String
     var body: String
-    var timeStamp: Date
+    var timeStamp: Date = Date()
     
     // MARK:    Initializer
     
-    init(title: String, body: String, timeStamp: Date) {
+    init(title: String, body: String) {
         self.title = title
         self.body = body
-        self.timeStamp = Date()
     }
     
     // MARK:    Equatable

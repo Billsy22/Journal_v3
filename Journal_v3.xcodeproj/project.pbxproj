@@ -12,6 +12,7 @@
 		16900F3E2018E13200188615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16900F3D2018E13200188615 /* Assets.xcassets */; };
 		16900F412018E13200188615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16900F3F2018E13200188615 /* LaunchScreen.storyboard */; };
 		16900F4B2018E24E00188615 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16900F4A2018E24E00188615 /* Entry.swift */; };
+		16B579852018E4D400D55163 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B579842018E4D400D55163 /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		16900F402018E13200188615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16900F422018E13200188615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16900F4A2018E24E00188615 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		16B579842018E4D400D55163 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				16900F4C2018E25B00188615 /* Models */,
-				16900F482018E14B00188615 /* Resources */,
+				16B579862018E4E500D55163 /* Model Controllers */,
 				16900F492018E15800188615 /* UI */,
+				16900F482018E14B00188615 /* Resources */,
 			);
 			path = Journal_v3;
 			sourceTree = "<group>";
@@ -86,6 +89,14 @@
 				16900F4A2018E24E00188615 /* Entry.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		16B579862018E4E500D55163 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				16B579842018E4D400D55163 /* EntryController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 			files = (
 				16900F4B2018E24E00188615 /* Entry.swift in Sources */,
 				16900F372018E13200188615 /* AppDelegate.swift in Sources */,
+				16B579852018E4D400D55163 /* EntryController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
