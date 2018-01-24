@@ -12,8 +12,8 @@ class EntryController {
     
     // MARK:    Properties
     
+    static var shared = EntryController()
     var entries: [Entry] = []
-    var shared = EntryController()
     
     // MARK:    CRUD Functions
     
@@ -25,7 +25,7 @@ class EntryController {
     
     // Remove an entry
     func remove(entry: Entry) {
-        let entryToRemove = entries.index(of: entry)
+        guard let entryToRemove = entries.index(of: entry) else { return }
         entries.remove(at: entryToRemove)
     }
     
