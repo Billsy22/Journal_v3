@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Entry: Equatable {
+class Entry: Equatable, Codable {
     
     // MARK:    Properties
     
